@@ -65,6 +65,16 @@ span{
         0 0 50px #03e9f4,
         0 0 100px #03e9f4;
 }
+.registed-link {
+    font-family: sans-serif;
+    font-weight: 400;
+    margin-left: 13px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.registed-link:hover{
+    color: #03e9f4;
+}
 
 
 
@@ -115,3 +125,51 @@ span{
         bottom: 100%;
     }
 }
+/*  */
+/*registed 
+ */
+
+
+ .Register{
+ }
+ form.register-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+}
+ #register-btn {
+    margin-left: 34%;
+    text-align: center;
+    background-color: #3498db; /* Màu nền nút */
+    color: #fff; /* Màu chữ */
+    padding: 10px 20px; /* Kích thước nút */
+    font-size: 16px; /* Kích thước chữ */
+    border: none; /* Loại bỏ viền */
+    border-radius: 5px; /* Bo góc nút */
+    cursor: pointer; /* Hiển thị biểu tượng con trỏ khi di chuột qua nút */
+    transition: background-color 0.3s ease; /* Hiệu ứng khi di chuột qua nút */
+  }
+  
+  #register-btn:hover {
+    background-color: #2980b9; /* Màu nền nút khi di chuột qua */
+  }
+  .icon-back {
+    cursor: pointer;
+    display: inline;
+    font-size: 27px;
+}
+.error-message {
+    height: 16px;
+    margin-top: 12px;
+}
+  
+  
+
+

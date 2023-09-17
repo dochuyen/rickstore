@@ -7,27 +7,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="themify-icons-font/themify-icons/themify-icons.css">
 </head>
 
 <body>
     <div class="login-box">
-        <h2>Login</h2>
+        <h2 class="login-title">Login</h2>
+        <div class="error-Green" style="color:green"></div>
         <form id="login-form">
-            <p>Username</p>
-            <input id="name" type="text" name="username"><br>
-            <span class="error-message" style="color:red"></span><br>
-            <p>Email</p>
-            <input type="text" name="email"> <br>
-            <span class="error-message" style="color:red"></span><br>
-            <p>Password</p>
-            <input type="password" name="password"> <br>
-            <span class="error-message" style="color:red"></span><br>
-            <button id="login-btn" type="submit">Login</button>
-
+            <div class="nameBox">
+                <p class="username-label">Username</p>
+                <input id="name" type="text" name="username" class="username-input">
+                <div class="error-message" style="color:red"></div>
+            </div>
+            <div class="emailBox">
+                <p class="email-label">Email</p>
+                <input type="text" name="email" class="email-input">
+                <div class="errorEmail" style="color:red"></div>
+                <div class="error-message" style="color:red"></div>
+            </div>
+            <div class="passBox">
+                <p class="password-label">Password</p>
+                <input type="password" name="password" class="password-input">
+                <div class="error-message" style="color:red"></div>
+            </div>
+            <button id="login-btn" type="button" class="login-button" onclick="Login()">Đăng Nhập</button>
+            <b class="registed-link" onclick="openRegister()">chưa có tài khoản</b>
         </form>
     </div>
 
+
+    <!-- đăng ký tài khoản -->
+    <div class="Register" style="display: none;">
+        <form class="register-form">
+            <div class="icon-back" onclick="backToLogin()"><i class="ti-arrow-circle-left"></i></div>
+            <div class="nameBox">
+                <p class="username-label">Username</p>
+                <input id="name" type="text" name="username" id="registed-name" class="usernameRegisted-input"><br>
+                <div class="error-message" style="color:red"></div>
+            </div>
+
+            <div class="emailBox">
+                <p class="email-label">Email</p>
+                <input type="text" name="email" id="registed-enail" class="emailRegisted-input"> <br>
+                <div class="error-message" style="color:red"></div>
+                <span class="errorEmail" style="color:red"></span>
+            </div>
+
+            <div class="passBox">
+                <p class="password-label">Password</p>
+                <input type="password" name="password" id="registed-pass" class="passwordRegisted-input"> <br>
+                <div class="error-message" style="color:red"></div>
+                <br>
+            </div>
+
+            <button id="register-btn" type="button" class="login-button" onclick="handerRegisted()">Đăng ký</button>
+        </form>
+    </div>
+
+
     <script src="./js/login.js"></script>
+    <script src="/js/validate.js"></script>
 </body>
 
 </html>
