@@ -1,6 +1,6 @@
 import express from "express";
 
- const productRouter=express.Router();
- productRouter.get("/")
+const productRouter = express.Router();
+productRouter.get("/");
 
- export default productRouter;
+export default productRouter;
