@@ -15,3 +15,10 @@ const getOne = async (req, res) => {
     const product = await ProductS.findById(id);
   } catch (error) {}
 };
+
+const getBrand = async (req, res) => {
+  try {
+    const { brandId } = req.params;
+    const brandProduct = await ProductS.find({});
+  } catch (error) {}
+};
