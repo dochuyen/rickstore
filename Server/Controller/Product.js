@@ -1,24 +1,26 @@
 import express from "express";
-import ProductS from "../Model/ProductS";
+
+import ProductSS from "../Model/ProductS.js";
 
 const getAllProducts = async (req, res) => {
-  const product = await ProductS.find({}).then((data) => {
+  const product = await ProductSS.find({}).then((data) => {
     return res.status(200).json({
       success: data ? true : false,
-      productData: data ? data : "cannot find product",
+      product: data ? data : "cannot find product",
     });
   });
 };
 const getOne = async (req, res) => {
   try {
     const id = req.params;
-    const product = await ProductS.findById(id);
+    const product = await ProductSS.findById(id);
   } catch (error) {}
 };
 
 const getBrand = async (req, res) => {
   try {
     const { brandId } = req.params;
-    const brandProduct = await ProductS.find({});
+    const brandProduct = await ProductSS.find({});
   } catch (error) {}
 };
+export { getOne, getBrand, getAllProducts };
